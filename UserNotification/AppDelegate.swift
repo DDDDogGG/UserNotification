@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let center = UNUserNotificationCenter.current()
+        
+        // assign a delegate
+        center.delegate = self
         
         // The first time that your app launches, the system prompts the user to grant or deny the requested interactions. Because the system saves the user’s response, calls to this method during subsequent launches do not prompt the user again.
         center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
@@ -58,6 +61,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         center.removeDeliveredNotifications(withIdentifiers: [])
         
         return true
+    }
+    
+    // The system silences notifications for foreground apps by default, delivering the notification’s data directly to your app.
+    // If you want the system to continue to display the notification interface, provide a delegate object for the UNUserNotificationCenter and implement this method.
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // Update the app interface directly.
+        
+        // Play a sound.
+        completionHandler(UNNotificationPresentationOptions.sound)
+    }
+    
+    // Responding to the selected Action
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        if response.notification.request.content.categoryIdentifier == "TIMER_EXPIRED" {
+            // Handle the actions for the expired timer.
+            if response.actionIdentifier == "SNOOZE_ACTION" {
+                // Invalidate the old timer and create a new one. . .
+            }
+            else if response.actionIdentifier == "STOP_ACTION" {
+                // Invalidate the timer. . .
+            }
+            
+            // Handling the Standard System Actions
+            if response.actionIdentifier == UNNotificationDismissActionIdentifier {
+                // The user dismissed the notification without taking action
+            }
+            else if response.actionIdentifier == UNNotificationDefaultActionIdentifier {
+                // The user launched the app
+            }
+        }
+        // Else handle actions for other notification types...
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
