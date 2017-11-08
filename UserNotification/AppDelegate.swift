@@ -46,6 +46,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Register the notification categories.
         center.setNotificationCategories([generalCategory, expiredCategory])
         
+        
+        // Managing Your App’s Notification Settings
+        center.getNotificationSettings { (settings) in
+            // UNNotificationSettings
+        }
+        // Managing Delivered Notifications
+        center.getDeliveredNotifications { (notification) in
+            // UNNotification
+        }
+        center.removeDeliveredNotifications(withIdentifiers: [])
+        
         return true
     }
 
