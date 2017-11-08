@@ -25,6 +25,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Enable or disable features based on authorization.
         }
         
+        let generalCategory = UNNotificationCategory(identifier: "GENERAL",
+                                                     actions: [],
+                                                     intentIdentifiers: [],
+                                                     options: .customDismissAction)
+        
+        // Create the custom actions for the TIMER_EXPIRED category.
+        let snoozeAction = UNNotificationAction(identifier: "SNOOZE_ACTION",
+                                                title: "Snooze",
+                                                options: UNNotificationActionOptions(rawValue: 0))
+        let stopAction = UNNotificationAction(identifier: "STOP_ACTION",
+                                              title: "Stop",
+                                              options: .foreground)
+        
+        let expiredCategory = UNNotificationCategory(identifier: "TIMER_EXPIRED",
+                                                     actions: [snoozeAction, stopAction],
+                                                     intentIdentifiers: [],
+                                                     options: UNNotificationCategoryOptions(rawValue: 0))
+        
+        // Register the notification categories.
+        center.setNotificationCategories([generalCategory, expiredCategory])
+        
         return true
     }
 
