@@ -28,6 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             // Enable or disable features based on authorization.
         }
         
+        // Register with APNs
+        UIApplication.shared.registerForRemoteNotifications()
+        
         let generalCategory = UNNotificationCategory(identifier: "GENERAL",
                                                      actions: [],
                                                      intentIdentifiers: [],
@@ -61,6 +64,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         center.removeDeliveredNotifications(withIdentifiers: [])
         
         return true
+    }
+    
+    // Handle remote notification registration.
+    // Never cache device token in your app. APNs issues a new device token to your app when certain events happen.
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
+        // Forward the token to your provider
+    }
+    
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        // The token is not currently available.
+        print("Remote notification support is unavailable due to error: \(error.localizedDescription)")
     }
     
     // The system silences notifications for foreground apps by default, delivering the notification’s data directly to your app.
