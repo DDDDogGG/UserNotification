@@ -12,7 +12,46 @@
 		CA0B54B31FB2D4A30083A614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0B54B11FB2D4A30083A614 /* Main.storyboard */; };
 		CA0B54B51FB2D4A30083A614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0B54B41FB2D4A30083A614 /* Assets.xcassets */; };
 		CA0B54B81FB2D4A30083A614 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0B54B61FB2D4A30083A614 /* LaunchScreen.storyboard */; };
+		CA9720EF1FB5523F00075506 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9720EE1FB5523F00075506 /* NotificationService.swift */; };
+		CA9720F31FB5523F00075506 /* ServiceExtention.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CA9720EC1FB5523F00075506 /* ServiceExtention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CA9720FF1FB5545B00075506 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9720FE1FB5545B00075506 /* UserNotifications.framework */; };
+		CA9721011FB5545B00075506 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9721001FB5545B00075506 /* UserNotificationsUI.framework */; };
+		CA9721041FB5545B00075506 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9721031FB5545B00075506 /* NotificationViewController.swift */; };
+		CA9721071FB5545B00075506 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9721051FB5545B00075506 /* MainInterface.storyboard */; };
+		CA97210B1FB5545B00075506 /* ContentExtention.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CA9720FC1FB5545B00075506 /* ContentExtention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA9720F11FB5523F00075506 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA0B54A21FB2D4A30083A614 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA9720EB1FB5523F00075506;
+			remoteInfo = ServiceExtention;
+		};
+		CA9721091FB5545B00075506 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA0B54A21FB2D4A30083A614 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA9720FB1FB5545B00075506;
+			remoteInfo = ContentExtention;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CA9720F71FB5523F00075506 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CA9720F31FB5523F00075506 /* ServiceExtention.appex in Embed App Extensions */,
+				CA97210B1FB5545B00075506 /* ContentExtention.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CA0B54AA1FB2D4A30083A614 /* UserNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +61,15 @@
 		CA0B54B41FB2D4A30083A614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA0B54B71FB2D4A30083A614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA0B54B91FB2D4A30083A614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA9720EC1FB5523F00075506 /* ServiceExtention.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ServiceExtention.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA9720EE1FB5523F00075506 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		CA9720F01FB5523F00075506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA9720FC1FB5545B00075506 /* ContentExtention.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ContentExtention.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA9720FE1FB5545B00075506 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		CA9721001FB5545B00075506 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		CA9721031FB5545B00075506 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		CA9721061FB5545B00075506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		CA9721081FB5545B00075506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +80,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA9720E91FB5523F00075506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA9720F91FB5545B00075506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA9721011FB5545B00075506 /* UserNotificationsUI.framework in Frameworks */,
+				CA9720FF1FB5545B00075506 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -39,6 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				CA0B54AC1FB2D4A30083A614 /* UserNotification */,
+				CA9720ED1FB5523F00075506 /* ServiceExtention */,
+				CA9721021FB5545B00075506 /* ContentExtention */,
+				CA9720FD1FB5545B00075506 /* Frameworks */,
 				CA0B54AB1FB2D4A30083A614 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				CA0B54AA1FB2D4A30083A614 /* UserNotification.app */,
+				CA9720EC1FB5523F00075506 /* ServiceExtention.appex */,
+				CA9720FC1FB5545B00075506 /* ContentExtention.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +133,34 @@
 			path = UserNotification;
 			sourceTree = "<group>";
 		};
+		CA9720ED1FB5523F00075506 /* ServiceExtention */ = {
+			isa = PBXGroup;
+			children = (
+				CA9720EE1FB5523F00075506 /* NotificationService.swift */,
+				CA9720F01FB5523F00075506 /* Info.plist */,
+			);
+			path = ServiceExtention;
+			sourceTree = "<group>";
+		};
+		CA9720FD1FB5545B00075506 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA9720FE1FB5545B00075506 /* UserNotifications.framework */,
+				CA9721001FB5545B00075506 /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA9721021FB5545B00075506 /* ContentExtention */ = {
+			isa = PBXGroup;
+			children = (
+				CA9721031FB5545B00075506 /* NotificationViewController.swift */,
+				CA9721051FB5545B00075506 /* MainInterface.storyboard */,
+				CA9721081FB5545B00075506 /* Info.plist */,
+			);
+			path = ContentExtention;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +171,52 @@
 				CA0B54A61FB2D4A30083A614 /* Sources */,
 				CA0B54A71FB2D4A30083A614 /* Frameworks */,
 				CA0B54A81FB2D4A30083A614 /* Resources */,
+				CA9720F71FB5523F00075506 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CA9720F21FB5523F00075506 /* PBXTargetDependency */,
+				CA97210A1FB5545B00075506 /* PBXTargetDependency */,
 			);
 			name = UserNotification;
 			productName = UserNotification;
 			productReference = CA0B54AA1FB2D4A30083A614 /* UserNotification.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CA9720EB1FB5523F00075506 /* ServiceExtention */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA9720F61FB5523F00075506 /* Build configuration list for PBXNativeTarget "ServiceExtention" */;
+			buildPhases = (
+				CA9720E81FB5523F00075506 /* Sources */,
+				CA9720E91FB5523F00075506 /* Frameworks */,
+				CA9720EA1FB5523F00075506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ServiceExtention;
+			productName = ServiceExtention;
+			productReference = CA9720EC1FB5523F00075506 /* ServiceExtention.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		CA9720FB1FB5545B00075506 /* ContentExtention */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA97210C1FB5545B00075506 /* Build configuration list for PBXNativeTarget "ContentExtention" */;
+			buildPhases = (
+				CA9720F81FB5545B00075506 /* Sources */,
+				CA9720F91FB5545B00075506 /* Frameworks */,
+				CA9720FA1FB5545B00075506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ContentExtention;
+			productName = ContentExtention;
+			productReference = CA9720FC1FB5545B00075506 /* ContentExtention.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +229,14 @@
 				ORGANIZATIONNAME = Django;
 				TargetAttributes = {
 					CA0B54A91FB2D4A30083A614 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+					CA9720EB1FB5523F00075506 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+					CA9720FB1FB5545B00075506 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -114,6 +256,8 @@
 			projectRoot = "";
 			targets = (
 				CA0B54A91FB2D4A30083A614 /* UserNotification */,
+				CA9720EB1FB5523F00075506 /* ServiceExtention */,
+				CA9720FB1FB5545B00075506 /* ContentExtention */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +273,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA9720EA1FB5523F00075506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA9720FA1FB5545B00075506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA9721071FB5545B00075506 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,7 +300,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA9720E81FB5523F00075506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA9720EF1FB5523F00075506 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA9720F81FB5545B00075506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA9721041FB5545B00075506 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA9720F21FB5523F00075506 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA9720EB1FB5523F00075506 /* ServiceExtention */;
+			targetProxy = CA9720F11FB5523F00075506 /* PBXContainerItemProxy */;
+		};
+		CA97210A1FB5545B00075506 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA9720FB1FB5545B00075506 /* ContentExtention */;
+			targetProxy = CA9721091FB5545B00075506 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CA0B54B11FB2D4A30083A614 /* Main.storyboard */ = {
@@ -158,6 +346,14 @@
 				CA0B54B71FB2D4A30083A614 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CA9721051FB5545B00075506 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA9721061FB5545B00075506 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -273,6 +469,7 @@
 		CA0B54BD1FB2D4A30083A614 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UserNotification/Info.plist;
@@ -288,6 +485,7 @@
 		CA0B54BE1FB2D4A30083A614 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UserNotification/Info.plist;
@@ -297,6 +495,62 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CA9720F41FB5523F00075506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ServiceExtention/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Django.UserNotification.ServiceExtention;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA9720F51FB5523F00075506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ServiceExtention/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Django.UserNotification.ServiceExtention;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CA97210D1FB5545B00075506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ContentExtention/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Django.UserNotification.ContentExtention;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA97210E1FB5545B00075506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ContentExtention/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Django.UserNotification.ContentExtention;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -317,6 +571,24 @@
 			buildConfigurations = (
 				CA0B54BD1FB2D4A30083A614 /* Debug */,
 				CA0B54BE1FB2D4A30083A614 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA9720F61FB5523F00075506 /* Build configuration list for PBXNativeTarget "ServiceExtention" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA9720F41FB5523F00075506 /* Debug */,
+				CA9720F51FB5523F00075506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA97210C1FB5545B00075506 /* Build configuration list for PBXNativeTarget "ContentExtention" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA97210D1FB5545B00075506 /* Debug */,
+				CA97210E1FB5545B00075506 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
